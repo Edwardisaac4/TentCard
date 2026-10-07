@@ -17,6 +17,8 @@ const fieldErrors = {
 };
 
 export async function signIn(_previous: SignInState, formData: FormData): Promise<SignInState> {
+  if (process.env.NODE_ENV !== "development") return { error: "Sign-in isn't available here." };
+
   const parsed = signInSchema.safeParse({
     email: formData.get("email"),
     password: formData.get("password"),

@@ -1,7 +1,11 @@
+import { notFound } from "next/navigation";
 import { SchoolLogo } from "@/components/school-logo";
 
 /** Centred column (UI_PROMPTS 2.14); on wider screens the form sits on a white card. */
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
+  // Placeholder sign-in exists only on the local dev server.
+  if (process.env.NODE_ENV !== "development") notFound();
+
   return (
     <main className="flex min-h-dvh flex-col items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
