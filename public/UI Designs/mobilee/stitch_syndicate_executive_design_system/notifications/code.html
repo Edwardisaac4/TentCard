@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error": "#ffffff", "on-error-container": "#93000a", "outline": "#71787a", "surface-container-low": "#edf5f7", "on-tertiary-fixed-variant": "#5e411f", "surface-container": "#e7eff2", "on-secondary-fixed-variant": "#604100", "on-primary-fixed": "#001f25", "on-primary": "#ffffff", "on-tertiary-fixed": "#2c1700", "on-primary-container": "#7ca5ae", "surface-container-highest": "#dce4e6", "on-secondary": "#ffffff", "surface-dim": "#d3dbde", "on-secondary-fixed": "#281900", "inverse-on-surface": "#eaf2f5", "primary": "#00252b", "tertiary-container": "#4b3010", "tertiary-fixed": "#ffdcbc", "surface-variant": "#dce4e6", "on-tertiary": "#ffffff", "secondary-fixed": "#ffdead", "primary-container": "#0e3b43", "tertiary-fixed-dim": "#eabf93", "surface-bright": "#f2fbfd", "inverse-primary": "#a4cdd7", "error-container": "#ffdad6", "surface": "#f2fbfd", "secondary-container": "#ffc565", "on-tertiary-container": "#bf976f", "surface-container-high": "#e1eaec", "on-surface-variant": "#41484a", "on-primary-fixed-variant": "#234c55", "secondary": "#7f5700", "primary-fixed": "#c0eaf4", "tertiary": "#321b00", "inverse-surface": "#2a3234", "primary-fixed-dim": "#a4cdd7", "on-surface": "#151d1f", "error": "#ba1a1a", "on-background": "#151d1f", "surface-tint": "#3c646d", "outline-variant": "#c0c8ca", "surface-container-lowest": "#ffffff", "on-secondary-container": "#765100", "secondary-fixed-dim": "#f6bd5d", "background": "#f2fbfd" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "2rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xl": "2rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "label-sm": ["IBM Plex Sans"], "display-sm": ["Newsreader"], "display-md": ["Newsreader"], "display-lg": ["Newsreader"], "title-card": ["IBM Plex Sans"], "label-md": ["IBM Plex Sans"], "body-md": ["IBM Plex Sans"], "display-lg-mobile": ["Newsreader"], "body-lg": ["IBM Plex Sans"] }, "fontSize": { "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "display-sm": ["22px", { "lineHeight": "30px", "fontWeight": "500" }], "display-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "title-card": ["17px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f2fbfd;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] flex items-center justify-center -ml-2 text-primary-container hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="font-display-sm text-display-sm text-primary tracking-tight truncate pl-space-xs">Executive Profile Detail</h1></div><div class="flex items-center gap-space-sm flex-shrink-0"><button aria-label="Seminar action" class="min-w-[44px] min-h-[44px] px-space-sm flex items-center justify-center text-secondary hover:text-on-secondary-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">share</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-[0_1px_4px_rgba(0,0,0,0.06)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Top Action & Overview Surface -->
+<div class="px-margin-mobile py-space-md bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Cohort Dispatch</span>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold" id="unread-counter-badge">3 Unread</span>
+</div>
+<button class="min-h-[44px] px-space-sm flex items-center font-body-md text-body-md font-semibold text-primary-container hover:text-primary transition-colors focus:outline-none" id="mark-all-read-btn" type="button">
+      Mark all read
+    </button>
+</div>
+<!-- Main Notification Feed -->
+<div class="px-margin-mobile py-space-md space-y-space-lg">
+<!-- SECTION: TODAY -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<h2 class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Today</h2>
+<span class="font-label-sm text-label-sm text-outline">Executive Board Active</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Item 1: Announcement (Unread) -->
+<article class="notification-item unread-item relative flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low transition-all cursor-pointer hover:bg-surface-container" data-status="unread">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary-container text-[20px]">campaign</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-sm">
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+<span class="font-semibold text-primary">Tunde Bakare</span> posted an announcement: Module 3 venue updated to Executive Chambers.
+            </p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">14m ago</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Symposium Notice</span>
+</div>
+</div>
+<div class="flex-shrink-0 self-center">
+<span class="unread-dot block w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</article>
+<!-- Item 2: Direct Board Response (Unread) -->
+<article class="notification-item unread-item relative flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low transition-all cursor-pointer hover:bg-surface-container" data-status="unread">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary-container text-[20px]">reply</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-sm">
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+<span class="font-semibold text-primary">Chinedu Eze</span> replied to your brief on NGX IPO governance framework.
+            </p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">2h ago</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Syndicate A</span>
+</div>
+</div>
+<div class="flex-shrink-0 self-center">
+<span class="unread-dot block w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</article>
+<!-- Item 3: Document Upload (Read) -->
+<article class="notification-item relative flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest transition-all cursor-pointer hover:bg-surface-container-low" data-status="read">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">article</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-sm">
+<p class="font-body-md text-body-md text-on-surface-variant leading-snug">
+<span class="font-medium text-on-surface">Halima Yusuf</span> shared an executive memo in <span class="font-medium text-on-surface">M&amp;A Cohort Review</span>.
+            </p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-sm text-label-sm text-outline">5h ago</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Confidential Dossier</span>
+</div>
+</div>
+<div class="flex-shrink-0 self-center opacity-0 w-2 h-2"></div>
+</article>
+</div>
+</section>
+<!-- SECTION: THIS WEEK -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<h2 class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">This week</h2>
+<span class="font-label-sm text-label-sm text-outline">Previous Sessions</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Item 4: Invitation Acceptance (Unread) -->
+<article class="notification-item unread-item relative flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low transition-all cursor-pointer hover:bg-surface-container" data-status="unread">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary-container text-[20px]">handshake</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-sm">
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+<span class="font-semibold text-primary">Folake Adeleke</span> confirmed your peer consultation request for Thursday.
+            </p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Yesterday</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Bilateral Advisory</span>
+</div>
+</div>
+<div class="flex-shrink-0 self-center">
+<span class="unread-dot block w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</article>
+<!-- Item 5: Inquiry / Ask (Read) -->
+<article class="notification-item relative flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest transition-all cursor-pointer hover:bg-surface-container-low" data-status="read">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">contact_support</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-sm">
+<p class="font-body-md text-body-md text-on-surface-variant leading-snug">
+              Cohort inquiry from <span class="font-medium text-on-surface">Ibrahim Bello</span>: Cold-chain logistics partners across Kano corridor.
+            </p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-sm text-label-sm text-outline">2 days ago</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Syndicate Exchange</span>
+</div>
+</div>
+<div class="flex-shrink-0 self-center opacity-0 w-2 h-2"></div>
+</article>
+<!-- Item 6: Cohort Lead Dispatch (Read) -->
+<article class="notification-item relative flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest transition-all cursor-pointer hover:bg-surface-container-low" data-status="read">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">verified</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-sm">
+<p class="font-body-md text-body-md text-on-surface-variant leading-snug">
+<span class="font-medium text-on-surface">Cohort Lead</span> released pre-reading materials for Executive Syndicate Room 3.
+            </p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-sm text-label-sm text-outline">3 days ago</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Curriculum</span>
+</div>
+</div>
+<div class="flex-shrink-0 self-center opacity-0 w-2 h-2"></div>
+</article>
+</div>
+</section>
+<!-- SECTION: EARLIER -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<h2 class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Earlier</h2>
+<span class="font-label-sm text-label-sm text-outline">Archive</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Item 7: Panel Resolution (Read) -->
+<article class="notification-item relative flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest transition-all cursor-pointer hover:bg-surface-container-low" data-status="read">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">forum</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-sm">
+<p class="font-body-md text-body-md text-on-surface-variant leading-snug">
+<span class="font-medium text-on-surface">Dr. Amina Garba</span> summarized key takeaways from the Macroeconomic Outlook keynote.
+            </p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-sm text-label-sm text-outline">Oct 12</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Leadership Assembly</span>
+</div>
+</div>
+<div class="flex-shrink-0 self-center opacity-0 w-2 h-2"></div>
+</article>
+<!-- Item 8: Peer Endorsement (Read) -->
+<article class="notification-item relative flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest transition-all cursor-pointer hover:bg-surface-container-low" data-status="read">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">workspace_premium</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-sm">
+<p class="font-body-md text-body-md text-on-surface-variant leading-snug">
+              Your syndicate case study was cited by <span class="font-medium text-on-surface">Dean’s Strategy Council</span>.
+            </p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-sm text-label-sm text-outline">Oct 09</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Institutional Commendation</span>
+</div>
+</div>
+<div class="flex-shrink-0 self-center opacity-0 w-2 h-2"></div>
+</article>
+</div>
+</section>
+</div>
+<!-- Footnote & Privacy Alignment Panel -->
+<footer class="mt-space-md mb-space-xl px-margin-mobile flex flex-col items-center text-center space-y-space-md">
+<button class="group flex items-center gap-space-xs py-space-sm px-space-md rounded-xl hover:bg-surface-container-low transition-colors focus:outline-none" type="button">
+<span class="font-body-md text-body-md font-semibold text-primary-container group-hover:text-primary">
+        Choose what you're notified about
+      </span>
+<span class="material-symbols-outlined text-[18px] text-primary-container group-hover:translate-x-0.5 transition-transform">
+        arrow_forward
+      </span>
+</button>
+<div class="p-space-md rounded-xl bg-surface-container-low max-w-sm flex items-start gap-space-sm text-left">
+<span class="material-symbols-outlined text-[18px] text-secondary flex-shrink-0 mt-0.5">
+        shield_lock
+      </span>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">
+        Cohort communications are strictly classified and broadcast under Chatham House guidelines. Dispatches are preserved in high-assurance storage.
+      </p>
+</div>
+</footer>
+</div>
+<script>
+  (function () {
+    const markAllBtn = document.getElementById('mark-all-read-btn');
+    const badge = document.getElementById('unread-counter-badge');
+    const items = document.querySelectorAll('.notification-item');
+
+    function updateCounter() {
+      const remainingUnread = document.querySelectorAll('.notification-item[data-status="unread"]').length;
+      if (badge) {
+        if (remainingUnread > 0) {
+          badge.textContent = `${remainingUnread} Unread`;
+          badge.classList.remove('hidden');
+        } else {
+          badge.textContent = 'All caught up';
+          badge.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+          badge.classList.add('bg-surface-container', 'text-on-surface-variant');
+        }
+      }
+    }
+
+    if (markAllBtn) {
+      markAllBtn.addEventListener('click', function () {
+        items.forEach(item => {
+          if (item.getAttribute('data-status') === 'unread') {
+            item.setAttribute('data-status', 'read');
+            item.classList.remove('bg-surface-container-low', 'hover:bg-surface-container');
+            item.classList.add('bg-surface-container-lowest', 'hover:bg-surface-container-low');
+            
+            const dot = item.querySelector('.unread-dot');
+            if (dot) {
+              dot.classList.add('opacity-0');
+              setTimeout(() => dot.remove(), 200);
+            }
+
+            const iconContainer = item.querySelector('.bg-primary-fixed');
+            if (iconContainer) {
+              iconContainer.classList.remove('bg-primary-fixed');
+              iconContainer.classList.add('bg-surface-container');
+              const icon = iconContainer.querySelector('.text-primary-container');
+              if (icon) {
+                icon.classList.remove('text-primary-container');
+                icon.classList.add('text-on-surface-variant');
+              }
+            }
+
+            const primaryTexts = item.querySelectorAll('.text-primary');
+            primaryTexts.forEach(el => {
+              el.classList.remove('text-primary');
+              el.classList.add('text-on-surface');
+            });
+          }
+        });
+        updateCounter();
+      });
+    }
+
+    items.forEach(item => {
+      item.addEventListener('click', function () {
+        if (this.getAttribute('data-status') === 'unread') {
+          this.setAttribute('data-status', 'read');
+          this.classList.remove('bg-surface-container-low', 'hover:bg-surface-container');
+          this.classList.add('bg-surface-container-lowest', 'hover:bg-surface-container-low');
+          
+          const dot = this.querySelector('.unread-dot');
+          if (dot) {
+            dot.classList.add('opacity-0');
+            setTimeout(() => dot.remove(), 200);
+          }
+
+          const iconContainer = this.querySelector('.bg-primary-fixed');
+          if (iconContainer) {
+            iconContainer.classList.remove('bg-primary-fixed');
+            iconContainer.classList.add('bg-surface-container');
+            const icon = iconContainer.querySelector('.text-primary-container');
+            if (icon) {
+              icon.classList.remove('text-primary-container');
+              icon.classList.add('text-on-surface-variant');
+            }
+          }
+          updateCounter();
+        }
+      });
+    });
+  })();
+</script></main></body></html>

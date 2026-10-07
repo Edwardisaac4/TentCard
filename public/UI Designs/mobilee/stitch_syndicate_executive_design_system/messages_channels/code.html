@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#3c646d", "outline-variant": "#c0c8ca", "secondary": "#7f5700", "primary": "#00252b", "on-primary-fixed-variant": "#234c55", "secondary-fixed": "#ffdead", "surface-dim": "#d3dbde", "on-error": "#ffffff", "inverse-primary": "#a4cdd7", "tertiary-container": "#4b3010", "on-surface-variant": "#41484a", "error": "#ba1a1a", "inverse-on-surface": "#eaf2f5", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container-low": "#edf5f7", "surface": "#f2fbfd", "on-primary-container": "#7ca5ae", "on-tertiary-fixed": "#2c1700", "on-error-container": "#93000a", "background": "#f2fbfd", "primary-fixed-dim": "#a4cdd7", "primary-container": "#0e3b43", "on-secondary": "#ffffff", "surface-container-high": "#e1eaec", "tertiary": "#321b00", "inverse-surface": "#2a3234", "on-tertiary-fixed-variant": "#5e411f", "on-primary": "#ffffff", "surface-variant": "#dce4e6", "secondary-container": "#ffc565", "outline": "#71787a", "surface-container-highest": "#dce4e6", "secondary-fixed-dim": "#f6bd5d", "tertiary-fixed-dim": "#eabf93", "on-tertiary-container": "#bf976f", "on-secondary-fixed-variant": "#604100", "tertiary-fixed": "#ffdcbc", "surface-bright": "#f2fbfd", "on-background": "#151d1f", "on-surface": "#151d1f", "primary-fixed": "#c0eaf4", "surface-container": "#e7eff2", "on-secondary-fixed": "#281900", "on-secondary-container": "#765100", "on-primary-fixed": "#001f25", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "2rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-md": "1rem", "gutter": "1.5rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "body-md": ["IBM Plex Sans"], "display-lg": ["Newsreader"], "title-card": ["IBM Plex Sans"], "label-sm": ["IBM Plex Sans"], "display-lg-mobile": ["Newsreader"], "label-md": ["IBM Plex Sans"], "body-lg": ["IBM Plex Sans"], "display-sm": ["Newsreader"], "display-md": ["Newsreader"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "title-card": ["17px", { "lineHeight": "24px", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-sm": ["22px", { "lineHeight": "30px", "fontWeight": "500" }], "display-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><h1 class="font-display-sm text-display-sm text-primary tracking-tight font-medium">Messages</h1></div><div class="flex items-center gap-space-sm"><button aria-label="Compose message" class="w-11 h-11 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[22px]">edit_square</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-6">
+<!-- Segmented Control & Search Section -->
+<div class="px-margin-mobile pt-space-sm flex flex-col gap-space-md">
+<!-- Executive Segmented Switcher -->
+<div class="bg-surface-container p-1 rounded-xl flex items-center shadow-sm">
+<button class="flex-1 py-2 text-center rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-primary" id="tab-direct" onclick="switchTab('direct')" type="button">
+        Direct
+      </button>
+<button class="flex-1 py-2 text-center rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary shadow-sm font-semibold flex items-center justify-center gap-1.5" id="tab-channels" onclick="switchTab('channels')" type="button">
+<span class="material-symbols-outlined text-[16px]">tag</span>
+<span>Channels</span>
+</button>
+</div>
+<!-- Search Input Bar -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest shadow-sm transition-all" placeholder="Search channels or messages..." type="text"/>
+</div>
+<!-- Seminar Highlight Tag / Context Badge -->
+<div class="bg-surface-container-low px-3.5 py-2.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wide uppercase">Executive Cohort XXIII</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">5 Active Discussions</span>
+</div>
+</div>
+<!-- Channel List Container -->
+<div class="mt-space-md flex flex-col">
+<!-- Channel 1: Announcements (Restricted) -->
+<div class="group relative px-margin-mobile py-4 bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-3 min-w-0 flex-1">
+<!-- Channel Brass Symbol Avatar -->
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-[14px]">lock</span>
+<h2 class="font-display-sm text-body-lg text-primary font-medium tracking-tight truncate">
+                # announcements
+              </h2>
+</div>
+<p class="font-label-sm text-label-sm text-outline mt-0.5 truncate">
+              Only the cohort lead can post • 81 members
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 line-clamp-1">
+<span class="font-medium text-primary">Tunde Bakare:</span> Module 3 session materials and pre-reads uploaded.
+            </p>
+</div>
+</div>
+<!-- Timestamp & Pill -->
+<div class="flex flex-col items-end gap-1.5 flex-shrink-0 pt-0.5">
+<span class="font-label-sm text-label-sm text-outline">2h ago</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider bg-surface-container-high text-on-surface-variant">
+            Official
+          </span>
+</div>
+</div>
+</div>
+<!-- Surface Spacer between rows -->
+<div class="h-[1px] w-full bg-surface-container-high"></div>
+<!-- Channel 2: General (Unread Active) -->
+<div class="group relative px-margin-mobile py-4 bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-3 min-w-0 flex-1">
+<div class="w-11 h-11 rounded-lg bg-primary text-on-primary flex items-center justify-center flex-shrink-0 font-semibold font-title-card text-body-md">
+            #
+          </div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-2">
+<h2 class="font-display-sm text-body-lg text-primary font-semibold tracking-tight truncate">
+                # general
+              </h2>
+<span class="w-2 h-2 rounded-full bg-secondary-container inline-block"></span>
+</div>
+<p class="font-label-sm text-label-sm text-outline mt-0.5 truncate">
+              81 members
+            </p>
+<p class="font-body-md text-body-md text-primary font-medium mt-1.5 line-clamp-1">
+<span class="text-primary font-semibold">Chinedu Eze:</span> Has anyone reviewed the syndicate term sheet?
+            </p>
+</div>
+</div>
+<!-- Unread Badge & Time -->
+<div class="flex flex-col items-end gap-1.5 flex-shrink-0 pt-0.5">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">10:14</span>
+<span class="min-w-[20px] h-5 px-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-[11px] font-semibold flex items-center justify-center">
+            5
+          </span>
+</div>
+</div>
+</div>
+<div class="h-[1px] w-full bg-surface-container-high"></div>
+<!-- Channel 3: Financial Services -->
+<div class="group relative px-margin-mobile py-4 bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-3 min-w-0 flex-1">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<h2 class="font-display-sm text-body-lg text-primary font-medium tracking-tight truncate">
+                # financial-services
+              </h2>
+</div>
+<p class="font-label-sm text-label-sm text-outline mt-0.5 truncate">
+              19 members
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 line-clamp-1">
+<span class="font-medium text-primary">Adaeze Okafor:</span> Central Bank circular on liquidity ratios is attached.
+            </p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 flex-shrink-0 pt-0.5">
+<span class="font-label-sm text-label-sm text-outline">Yesterday</span>
+</div>
+</div>
+</div>
+<div class="h-[1px] w-full bg-surface-container-high"></div>
+<!-- Channel 4: Telecommunications -->
+<div class="group relative px-margin-mobile py-4 bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-3 min-w-0 flex-1">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">cell_tower</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<h2 class="font-display-sm text-body-lg text-primary font-medium tracking-tight truncate">
+                # telecommunications
+              </h2>
+</div>
+<p class="font-label-sm text-label-sm text-outline mt-0.5 truncate">
+              8 members
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 line-clamp-1">
+<span class="font-medium text-primary">Babatunde Alao:</span> Towers infrastructure sharing conference in VI next Tuesday.
+            </p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 flex-shrink-0 pt-0.5">
+<span class="font-label-sm text-label-sm text-outline">Mon</span>
+</div>
+</div>
+</div>
+<div class="h-[1px] w-full bg-surface-container-high"></div>
+<!-- Channel 5: Energy -->
+<div class="group relative px-margin-mobile py-4 bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-3 min-w-0 flex-1">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<h2 class="font-display-sm text-body-lg text-primary font-medium tracking-tight truncate">
+                # energy
+              </h2>
+</div>
+<p class="font-label-sm text-label-sm text-outline mt-0.5 truncate">
+              6 members
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 line-clamp-1">
+<span class="font-medium text-primary">Ngozi Obi:</span> Off-grid solar financing roundtable summary.
+            </p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 flex-shrink-0 pt-0.5">
+<span class="font-label-sm text-label-sm text-outline">Oct 10</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Card: Syndicate Working Groups (Moment of Delight) -->
+<div class="mx-margin-mobile mt-space-lg bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-title-card text-title-card text-primary">Syndicate Study Groups</span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary font-semibold hover:underline" type="button">
+        Browse All (12)
+      </button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+      Cross-functional breakout rooms for Module 3 Capstone simulations and peer-reviewed investment memos.
+    </p>
+<div class="flex items-center gap-2 pt-1">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock_open</span> Capstone Group 4
+      </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Private Equity Syndicate
+      </span>
+</div>
+</div>
+<!-- Executive Institutional Footer Note -->
+<div class="mx-margin-mobile mt-space-lg mb-2 p-3.5 rounded-lg bg-surface-container-low flex items-center justify-center gap-2 text-center">
+<span class="material-symbols-outlined text-outline text-[16px] flex-shrink-0">shield</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant tracking-tight">
+      Cohort Chatham House Rule Enabled • End-to-end encrypted channel archive
+    </p>
+</div>
+</div>
+<script>
+  function switchTab(mode) {
+    const directBtn = document.getElementById('tab-direct');
+    const channelsBtn = document.getElementById('tab-channels');
+    
+    if (mode === 'direct') {
+      directBtn.className = "flex-1 py-2 text-center rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary shadow-sm font-semibold flex items-center justify-center gap-1.5";
+      directBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">person</span><span>Direct</span>';
+      
+      channelsBtn.className = "flex-1 py-2 text-center rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-primary";
+      channelsBtn.innerHTML = 'Channels';
+    } else {
+      channelsBtn.className = "flex-1 py-2 text-center rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary shadow-sm font-semibold flex items-center justify-center gap-1.5";
+      channelsBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">tag</span><span>Channels</span>';
+      
+      directBtn.className = "flex-1 py-2 text-center rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-primary";
+      directBtn.innerHTML = 'Direct';
+    }
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(14,59,67,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex justify-between items-center h-16 px-space-xs"><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">roofing</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Home</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="directory" href="#"><span class="material-symbols-outlined text-[22px]">badge</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Directory</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] transition-colors text-primary font-semibold" data-path="messages" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">forum</span><span class="absolute -top-1 -right-2 bg-secondary text-on-secondary font-label-sm text-[10px] leading-none px-1 py-0.5 rounded-full font-semibold min-w-[15px] text-center">3</span></div><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Messages</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="board" href="#"><span class="material-symbols-outlined text-[22px]">clarify</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Board</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="me" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Me</span></a></div></nav></body></html>

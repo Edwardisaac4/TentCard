@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#3c646d", "outline-variant": "#c0c8ca", "secondary": "#7f5700", "primary": "#00252b", "on-primary-fixed-variant": "#234c55", "secondary-fixed": "#ffdead", "surface-dim": "#d3dbde", "on-error": "#ffffff", "inverse-primary": "#a4cdd7", "tertiary-container": "#4b3010", "on-surface-variant": "#41484a", "error": "#ba1a1a", "inverse-on-surface": "#eaf2f5", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container-low": "#edf5f7", "surface": "#f2fbfd", "on-primary-container": "#7ca5ae", "on-tertiary-fixed": "#2c1700", "on-error-container": "#93000a", "background": "#f2fbfd", "primary-fixed-dim": "#a4cdd7", "primary-container": "#0e3b43", "on-secondary": "#ffffff", "surface-container-high": "#e1eaec", "tertiary": "#321b00", "inverse-surface": "#2a3234", "on-tertiary-fixed-variant": "#5e411f", "on-primary": "#ffffff", "surface-variant": "#dce4e6", "secondary-container": "#ffc565", "outline": "#71787a", "surface-container-highest": "#dce4e6", "secondary-fixed-dim": "#f6bd5d", "tertiary-fixed-dim": "#eabf93", "on-tertiary-container": "#bf976f", "on-secondary-fixed-variant": "#604100", "tertiary-fixed": "#ffdcbc", "surface-bright": "#f2fbfd", "on-background": "#151d1f", "on-surface": "#151d1f", "primary-fixed": "#c0eaf4", "surface-container": "#e7eff2", "on-secondary-fixed": "#281900", "on-secondary-container": "#765100", "on-primary-fixed": "#001f25", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "2rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-md": "1rem", "gutter": "1.5rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "body-md": ["IBM Plex Sans"], "display-lg": ["Newsreader"], "title-card": ["IBM Plex Sans"], "label-sm": ["IBM Plex Sans"], "display-lg-mobile": ["Newsreader"], "label-md": ["IBM Plex Sans"], "body-lg": ["IBM Plex Sans"], "display-sm": ["Newsreader"], "display-md": ["Newsreader"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "title-card": ["17px", { "lineHeight": "24px", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-sm": ["22px", { "lineHeight": "30px", "fontWeight": "500" }], "display-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><h1 class="font-display-sm text-display-sm text-primary tracking-tight font-medium">Messages</h1></div><div class="flex items-center gap-space-sm"><button aria-label="Compose message" class="w-11 h-11 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[22px]">edit_square</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Architectural Top Sub-Header & Controls -->
+<div class="px-margin-mobile pt-space-sm pb-space-md flex flex-col gap-space-md">
+<!-- Segmented Control (Direct vs Channels) -->
+<div aria-label="Conversation views" class="flex p-1 bg-surface-container rounded-lg relative" role="tablist">
+<button aria-controls="panel-direct" aria-selected="true" class="flex-1 py-2 px-3 rounded-lg text-center font-label-md text-label-md font-semibold transition-all duration-200 bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-1.5" id="tab-direct" onclick="switchInboxTab('direct')" role="tab">
+<span>Direct</span>
+<span class="inline-flex items-center justify-center bg-secondary-container text-on-secondary-container px-1.5 py-0.2 rounded-full text-[11px] font-semibold leading-none min-w-[18px]">3</span>
+</button>
+<button aria-controls="panel-channels" aria-selected="false" class="flex-1 py-2 px-3 rounded-lg text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-200 flex items-center justify-center gap-1.5" id="tab-channels" onclick="switchInboxTab('channels')" role="tab">
+<span>Channels</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</button>
+</div>
+<!-- Search Input Field -->
+<div class="relative flex items-center w-full">
+<div class="absolute left-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-11 pl-10 pr-10 bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline rounded-lg outline-none focus:bg-surface-container-low transition-colors shadow-none" id="search-input" oninput="handleSearch(this.value)" placeholder="Search messages, peers, or syndicates..." type="search"/>
+<button aria-label="Clear search" class="hidden absolute right-3 text-outline hover:text-on-surface transition-colors" id="clear-search-btn" onclick="clearSearch()">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</div>
+<!-- Direct Messages Conversation Panel -->
+<div aria-labelledby="tab-direct" class="flex flex-col w-full" id="panel-direct" role="tabpanel">
+<!-- Cohort Announcement / Pinned Notice Pill -->
+<div class="px-margin-mobile mb-space-sm">
+<div class="flex items-center justify-between px-3.5 py-2.5 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-secondary">workspace_premium</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">
+            Cohort 24 Directory: <span class="text-on-surface font-medium">Session Room Wheatbaker II Active</span>
+</p>
+</div>
+<span class="text-[11px] font-label-sm uppercase tracking-wider text-secondary font-semibold ml-2 shrink-0">Live</span>
+</div>
+</div>
+<!-- Conversation Feed Container -->
+<div class="flex flex-col w-full bg-surface-container-lowest" id="conversations-list">
+<!-- 1. Chinedu Eze (Unread - 2 messages, Online) -->
+<a class="group relative flex items-center px-margin-mobile py-3.5 min-h-[72px] bg-surface-container-lowest hover:bg-surface-container-low active:bg-surface-container transition-colors conversation-row" data-contact="Chinedu Eze" data-role="Director of Customer Experience at Lumen Telecom" href="#">
+<!-- Avatar Block: Monogram on #EEF5F5 with Brass Ring + Online Dot -->
+<div class="relative shrink-0 mr-3.5">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center relative shadow-[0_0_0_2px_#B8862B]">
+<span class="font-display-sm text-[19px] text-primary select-none font-medium">CE</span>
+</div>
+<!-- Online presence dot -->
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-[#1E8E3E] rounded-full shadow-[0_0_0_2px_#FFFFFF]" title="Active now"></span>
+</div>
+<!-- Center Text Block: Name & Truncated Preview -->
+<div class="flex-1 min-w-0 pr-2">
+<div class="flex items-center justify-between mb-0.5">
+<h2 class="font-body-md text-[15px] font-semibold text-on-surface truncate group-hover:text-primary transition-colors">
+              Chinedu Eze
+            </h2>
+<span class="font-label-sm text-[12px] text-primary font-semibold shrink-0 ml-2">10:42</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-body-md text-[13.5px] text-primary font-medium truncate">
+              Looking forward to catching up at Wheatbaker tomorrow morning.
+            </p>
+<!-- Unread Badge Pill (Lagos Lagoon #0E3B43) -->
+<span class="ml-2.5 shrink-0 inline-flex items-center justify-center min-w-[19px] h-[19px] px-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-[11px] font-semibold">
+              2
+            </span>
+</div>
+</div>
+</a>
+<!-- Visual subtle divider -->
+<div class="h-px w-full bg-surface-container-high/60 pl-[76px]"><div class="h-px bg-surface-container-high"></div></div>
+<!-- 2. Babatunde Alao (Unread - 1 message) -->
+<a class="group relative flex items-center px-margin-mobile py-3.5 min-h-[72px] bg-surface-container-lowest hover:bg-surface-container-low active:bg-surface-container transition-colors conversation-row" data-contact="Babatunde Alao" data-role="Stanbic IBTC" href="#">
+<div class="relative shrink-0 mr-3.5">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center relative shadow-[0_0_0_2px_#B8862B]">
+<span class="font-display-sm text-[19px] text-primary select-none font-medium">BA</span>
+</div>
+</div>
+<div class="flex-1 min-w-0 pr-2">
+<div class="flex items-center justify-between mb-0.5">
+<h2 class="font-body-md text-[15px] font-semibold text-on-surface truncate group-hover:text-primary transition-colors">
+              Babatunde Alao
+            </h2>
+<span class="font-label-sm text-[12px] text-primary font-semibold shrink-0 ml-2">08:15</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-body-md text-[13.5px] text-primary font-medium truncate">
+              Sent over the corporate advisory term sheet outline for your review.
+            </p>
+<span class="ml-2.5 shrink-0 inline-flex items-center justify-center min-w-[19px] h-[19px] px-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-[11px] font-semibold">
+              1
+            </span>
+</div>
+</div>
+</a>
+<!-- Visual subtle divider -->
+<div class="h-px w-full bg-surface-container-high/60 pl-[76px]"><div class="h-px bg-surface-container-high"></div></div>
+<!-- 3. Ngozi Obi (Read, Online) -->
+<a class="group relative flex items-center px-margin-mobile py-3.5 min-h-[72px] bg-surface-container-lowest hover:bg-surface-container-low active:bg-surface-container transition-colors conversation-row" data-contact="Ngozi Obi" data-role="Synergy Private Equity" href="#">
+<div class="relative shrink-0 mr-3.5">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center relative shadow-[0_0_0_2px_#B8862B]">
+<span class="font-display-sm text-[19px] text-primary select-none font-medium">NO</span>
+</div>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-[#1E8E3E] rounded-full shadow-[0_0_0_2px_#FFFFFF]" title="Active now"></span>
+</div>
+<div class="flex-1 min-w-0 pr-2">
+<div class="flex items-center justify-between mb-0.5">
+<h2 class="font-body-md text-[15px] font-medium text-on-surface truncate">
+              Ngozi Obi
+            </h2>
+<span class="font-label-sm text-[12px] text-outline shrink-0 ml-2">Yesterday</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-body-md text-[13.5px] text-on-surface-variant truncate">
+              The private equity syndicate deck looks solid. Let's touch base soon.
+            </p>
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0 ml-2">done_all</span>
+</div>
+</div>
+</a>
+<!-- Visual subtle divider -->
+<div class="h-px w-full bg-surface-container-high/60 pl-[76px]"><div class="h-px bg-surface-container-high"></div></div>
+<!-- 4. Folake Adeleke (Read) -->
+<a class="group relative flex items-center px-margin-mobile py-3.5 min-h-[72px] bg-surface-container-lowest hover:bg-surface-container-low active:bg-surface-container transition-colors conversation-row" data-contact="Folake Adeleke" data-role="Sahel Capital" href="#">
+<div class="relative shrink-0 mr-3.5">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center relative shadow-[0_0_0_2px_#B8862B]">
+<span class="font-display-sm text-[19px] text-primary select-none font-medium">FA</span>
+</div>
+</div>
+<div class="flex-1 min-w-0 pr-2">
+<div class="flex items-center justify-between mb-0.5">
+<h2 class="font-body-md text-[15px] font-medium text-on-surface truncate">
+              Folake Adeleke
+            </h2>
+<span class="font-label-sm text-[12px] text-outline shrink-0 ml-2">Yesterday</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-body-md text-[13.5px] text-on-surface-variant truncate">
+              Thank you for the introduction to the agricultural fund lead.
+            </p>
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0 ml-2">done_all</span>
+</div>
+</div>
+</a>
+<!-- Visual subtle divider -->
+<div class="h-px w-full bg-surface-container-high/60 pl-[76px]"><div class="h-px bg-surface-container-high"></div></div>
+<!-- 5. Tunde Bakare (Read - Cohort Lead) -->
+<a class="group relative flex items-center px-margin-mobile py-3.5 min-h-[72px] bg-surface-container-lowest hover:bg-surface-container-low active:bg-surface-container transition-colors conversation-row" data-contact="Tunde Bakare" data-role="Cohort lead" href="#">
+<div class="relative shrink-0 mr-3.5">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center relative shadow-[0_0_0_2px_#B8862B]">
+<span class="font-display-sm text-[19px] text-primary select-none font-medium">TB</span>
+</div>
+</div>
+<div class="flex-1 min-w-0 pr-2">
+<div class="flex items-center justify-between mb-0.5">
+<div class="flex items-center gap-1.5 truncate">
+<h2 class="font-body-md text-[15px] font-medium text-on-surface truncate">
+                Tunde Bakare
+              </h2>
+<span class="px-1.5 py-0.2 rounded bg-[#F3E7CE] text-[#9A6F1E] font-label-sm text-[10.5px] font-semibold leading-tight shrink-0">
+                Cohort Lead
+              </span>
+</div>
+<span class="font-label-sm text-[12px] text-outline shrink-0 ml-2">Mon</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-body-md text-[13.5px] text-on-surface-variant truncate">
+              Please ensure you have filled out your accommodation details for Module 3.
+            </p>
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0 ml-2">done</span>
+</div>
+</div>
+</a>
+<!-- Visual subtle divider -->
+<div class="h-px w-full bg-surface-container-high/60 pl-[76px]"><div class="h-px bg-surface-container-high"></div></div>
+<!-- 6. Emeka Nwosu (Read) -->
+<a class="group relative flex items-center px-margin-mobile py-3.5 min-h-[72px] bg-surface-container-lowest hover:bg-surface-container-low active:bg-surface-container transition-colors conversation-row" data-contact="Emeka Nwosu" data-role="Flour Mills of Nigeria" href="#">
+<div class="relative shrink-0 mr-3.5">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center relative shadow-[0_0_0_2px_#B8862B]">
+<span class="font-display-sm text-[19px] text-primary select-none font-medium">EN</span>
+</div>
+</div>
+<div class="flex-1 min-w-0 pr-2">
+<div class="flex items-center justify-between mb-0.5">
+<h2 class="font-body-md text-[15px] font-medium text-on-surface truncate">
+              Emeka Nwosu
+            </h2>
+<span class="font-label-sm text-[12px] text-outline shrink-0 ml-2">Oct 12</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-body-md text-[13.5px] text-on-surface-variant truncate">
+              Logistics route planning confirmed for the regional distribution workshop.
+            </p>
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0 ml-2">done_all</span>
+</div>
+</div>
+</a>
+</div>
+<!-- Empty Search State -->
+<div class="hidden py-12 px-margin-mobile flex-col items-center justify-center text-center" id="empty-search-state">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[24px] text-outline">search_off</span>
+</div>
+<h3 class="font-display-sm text-[18px] text-on-surface font-medium mb-1">No conversation found</h3>
+<p class="font-body-md text-on-surface-variant text-[13px] max-w-[260px]">
+        No peer matches your query. Try searching by full name or syndicate keyword.
+      </p>
+</div>
+<!-- Confidentiality Protocol Micro-Badge -->
+<div class="mt-space-lg px-margin-mobile flex items-center justify-center gap-2 text-outline">
+<span class="material-symbols-outlined text-[15px]">lock</span>
+<span class="font-label-sm text-[11.5px] uppercase tracking-wider font-medium">Cohort Chatham House Rule Enabled</span>
+</div>
+</div>
+<!-- Channels Tab Panel (Initially Hidden for Toggle) -->
+<div aria-labelledby="tab-channels" class="hidden flex-col w-full px-margin-mobile gap-space-sm pb-space-lg" id="panel-channels" role="tabpanel">
+<!-- Channel 1: Energy & Infrastructure Syndicate -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">tag</span>
+<h3 class="font-body-md text-[16px] font-semibold text-primary">Energy &amp; Infra Syndicate</h3>
+</div>
+<span class="font-label-sm text-[12px] text-outline">11:15</span>
+</div>
+<p class="font-body-md text-[13.5px] text-on-surface-variant line-clamp-1">
+        Folake Adeleke: Solar microgrid financing proposal has been shared in the module drive.
+      </p>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px]">28 Members</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-semibold">Active Discussion</span>
+</div>
+</div>
+<!-- Channel 2: FinTech & Digital Assets Working Group -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">tag</span>
+<h3 class="font-body-md text-[16px] font-semibold text-primary">FinTech Regulatory Circle</h3>
+</div>
+<span class="font-label-sm text-[12px] text-outline">Yesterday</span>
+</div>
+<p class="font-body-md text-[13.5px] text-on-surface-variant line-clamp-1">
+        Babatunde Alao: Central bank sandbox review framework slides now accessible.
+      </p>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px]">34 Members</span>
+</div>
+</div>
+<!-- Channel 3: Executive Seminar Strategy Group -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">tag</span>
+<h3 class="font-body-md text-[16px] font-semibold text-primary">Module 3 Advisory Tent</h3>
+</div>
+<span class="font-label-sm text-[12px] text-outline">Sep 28</span>
+</div>
+<p class="font-body-md text-[13.5px] text-on-surface-variant line-clamp-1">
+        Tunde Bakare: Pre-reading materials for Friday's case review have been distributed.
+      </p>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px]">All Cohort (42)</span>
+</div>
+</div>
+</div>
+<script>
+    function switchInboxTab(tab) {
+      const tabDirect = document.getElementById('tab-direct');
+      const tabChannels = document.getElementById('tab-channels');
+      const panelDirect = document.getElementById('panel-direct');
+      const panelChannels = document.getElementById('panel-channels');
+
+      if (tab === 'direct') {
+        tabDirect.setAttribute('aria-selected', 'true');
+        tabDirect.className = 'flex-1 py-2 px-3 rounded-lg text-center font-label-md text-label-md font-semibold transition-all duration-200 bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-1.5';
+        tabChannels.setAttribute('aria-selected', 'false');
+        tabChannels.className = 'flex-1 py-2 px-3 rounded-lg text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-200 flex items-center justify-center gap-1.5';
+        panelDirect.classList.remove('hidden');
+        panelDirect.classList.add('flex');
+        panelChannels.classList.add('hidden');
+        panelChannels.classList.remove('flex');
+      } else {
+        tabChannels.setAttribute('aria-selected', 'true');
+        tabChannels.className = 'flex-1 py-2 px-3 rounded-lg text-center font-label-md text-label-md font-semibold transition-all duration-200 bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-1.5';
+        tabDirect.setAttribute('aria-selected', 'false');
+        tabDirect.className = 'flex-1 py-2 px-3 rounded-lg text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-200 flex items-center justify-center gap-1.5';
+        panelChannels.classList.remove('hidden');
+        panelChannels.classList.add('flex');
+        panelDirect.classList.add('hidden');
+        panelDirect.classList.remove('flex');
+      }
+    }
+
+    function handleSearch(query) {
+      const clean = query.trim().toLowerCase();
+      const clearBtn = document.getElementById('clear-search-btn');
+      const rows = document.querySelectorAll('.conversation-row');
+      const emptyState = document.getElementById('empty-search-state');
+      let visibleCount = 0;
+
+      if (clean.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+
+      rows.forEach(row => {
+        const contact = (row.getAttribute('data-contact') || '').toLowerCase();
+        const role = (row.getAttribute('data-role') || '').toLowerCase();
+        const text = row.innerText.toLowerCase();
+
+        if (contact.includes(clean) || role.includes(clean) || text.includes(clean)) {
+          row.classList.remove('hidden');
+          row.classList.add('flex');
+          visibleCount++;
+        } else {
+          row.classList.add('hidden');
+          row.classList.remove('flex');
+        }
+      });
+
+      if (visibleCount === 0 && clean.length > 0) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+      } else {
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+      }
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('search-input');
+      input.value = '';
+      handleSearch('');
+      input.focus();
+    }
+  </script>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(14,59,67,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex justify-between items-center h-16 px-space-xs"><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">roofing</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Home</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="directory" href="#"><span class="material-symbols-outlined text-[22px]">badge</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Directory</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] transition-colors relative text-primary font-semibold" data-path="messages" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">forum</span><span class="absolute -top-1 -right-2 bg-secondary text-on-secondary font-label-sm text-[10px] leading-none px-1 py-0.5 rounded-full font-semibold min-w-[15px] text-center">3</span></div><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Messages</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="board" href="#"><span class="material-symbols-outlined text-[22px]">clarify</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Board</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="me" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Me</span></a></div></nav></body></html>
