@@ -61,6 +61,20 @@ export type Announcement = {
   pinned?: boolean;
 };
 
+export type CohortEvent = {
+  id: string;
+  name: string;
+  title: string;
+  body: string;
+  photo: { src: string; width: number; height: number; alt: string };
+  date: string;
+  time: string;
+  venue: string;
+  dressCode: string;
+  food: string;
+  rsvp: string;
+};
+
 export type BoardPost = {
   id: string;
   type: "ask" | "offer";
@@ -302,8 +316,25 @@ export const boardPosts: BoardPost[] = [
   },
 ];
 
-/** Classmates who joined the platform since Monday, newest first. */
-export const newThisWeek = ["yetunde-ayeni", "aderonke-adebanjo"];
+/** The next class get-together, from the SMP 102 mixer flier. */
+export const upcomingEvent: CohortEvent = {
+  id: "smp-102-mixer",
+  name: "SMP 102 Mixer",
+  title: "Link up.",
+  body: "Swap the case studies for conversation. Come connect and unwind.",
+  photo: {
+    src: "/announcements/smp-102-mixer.jpg",
+    width: 1024,
+    height: 500,
+    alt: "Six smiling classmates leaning into a group photo in a garden",
+  },
+  date: "Wednesday, 14 October",
+  time: "5:45pm",
+  venue: "LBS Gazebo",
+  dressCode: "Come as you are",
+  food: "All sorted",
+  rsvp: "Just reply “Yes” to the class secretary.",
+};
 
 /** Suggested introductions for the signed-in member, each with a one-line reason. */
 export const suggestions = [
