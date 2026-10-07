@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Image from "next/image";
 import { Ellipsis } from "lucide-react";
 import { Avatar } from "@/components/avatar";
 import { ActiveNavLinks, NavLinks } from "@/components/nav-links";
@@ -12,13 +13,8 @@ export function Sidebar() {
   return (
     <aside className="sticky top-0 flex h-dvh w-20 shrink-0 flex-col bg-lagoon-deep py-6 text-white lg:w-rail">
       <div className="mb-8 px-3 lg:px-6">
-        <div className="flex h-10 items-center justify-center rounded-control border border-dashed border-white/30 text-label-sm text-white/60">
-          <span className="lg:hidden">Logo</span>
-          <span className="hidden lg:inline">School logo</span>
-        </div>
-        <p className="mt-3 text-center font-serif text-body-lg font-medium lg:text-left lg:text-display-sm">
-          {cohort.name}
-        </p>
+        <Image {...cohort.schoolCrest} alt={cohort.school} loading="eager" className="mx-auto h-10 w-auto lg:hidden" />
+        <Image {...cohort.schoolLogo} alt={cohort.school} loading="eager" className="hidden h-16 w-auto lg:block" />
       </div>
 
       {/* usePathname needs a Suspense boundary on routes with params unknown at build time */}
@@ -27,7 +23,7 @@ export function Sidebar() {
       </Suspense>
 
       <div className="mt-auto flex flex-col items-center gap-3 border-t border-white/10 px-3 pt-4 lg:flex-row lg:px-6">
-        <Avatar name={fullName(me)} size={36} />
+        <Avatar name={fullName(me)} photo={me.photo} size={36} />
         <span className="sr-only lg:not-sr-only lg:min-w-0 lg:flex-1 lg:truncate lg:font-serif lg:text-body-lg lg:font-medium">
           {fullName(me)}
         </span>

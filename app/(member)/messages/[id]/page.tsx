@@ -68,7 +68,7 @@ async function Conversation({ params }: Pick<PageProps<"/messages/[id]">, "param
         >
           <ArrowLeft aria-hidden="true" className="size-5" />
         </Link>
-        <Avatar name={name} size={40} online={conversation?.online} />
+        <Avatar name={name} photo={person.photo} size={40} online={conversation?.online} />
         <div className="min-w-0 flex-1">
           <h2 className="truncate font-serif text-title-card font-medium text-ink">{name}</h2>
           <p className="truncate text-label-md font-normal text-ink-secondary">{subtitle}</p>
@@ -89,7 +89,13 @@ async function Conversation({ params }: Pick<PageProps<"/messages/[id]">, "param
 
       <Thread
         key={person.id}
-        person={{ firstName: person.firstName, name, subtitle, canHelpWith: person.canHelpWith }}
+        person={{
+          firstName: person.firstName,
+          name,
+          photo: person.photo,
+          subtitle,
+          canHelpWith: person.canHelpWith,
+        }}
         initialMessages={conversation?.messages ?? []}
         readAt={conversation?.readAt}
       />

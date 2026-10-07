@@ -66,15 +66,17 @@ async function Profile({ params }: Pick<PageProps<"/people/[id]">, "params">) {
   return (
     <div className={columns}>
       <section aria-label={name} className="card card-seminar p-8 lg:sticky lg:top-8">
-        <Avatar name={name} size={128} />
+        <Avatar name={name} photo={person.photo} size={128} />
         <h1 className="mt-6 font-serif text-display-lg text-ink">{name}</h1>
         {person.isLead && <span className="chip chip-lead mt-2">Cohort lead</span>}
         <p className="mt-2 text-body-lg text-ink">{person.role}</p>
         <p className="text-body-lg text-ink-secondary">{person.company}</p>
-        <p className="mt-2 flex items-center gap-1.5 text-body-md text-ink-secondary">
-          <MapPin aria-hidden="true" className="size-4" />
-          {person.location}
-        </p>
+        {person.location && (
+          <p className="mt-2 flex items-center gap-1.5 text-body-md text-ink-secondary">
+            <MapPin aria-hidden="true" className="size-4" />
+            {person.location}
+          </p>
+        )}
         <div className="mt-8 flex flex-col gap-3">
           <Link href={`/messages/${person.id}`} className="btn btn-primary h-12 text-body-lg">
             <MessageSquare aria-hidden="true" className="size-5" />

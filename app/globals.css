@@ -23,12 +23,16 @@
 }
 
 @theme {
-  /* Brand palette (DESIGN.md › Colors) */
-  --color-lagoon: #0e3b43;
-  --color-lagoon-hover: #2a6b73;
-  --color-lagoon-deep: #0a2e34;
-  --color-lagoon-tint: #dcebec;
-  --color-lagoon-faint: #eef5f5;
+  /* Brand palette (DESIGN.md › Colors)
+   * The primary is navy #082658, taken from the SMP 102 mixer poster. It
+   * replaced the original blue-green, but the `lagoon` token names stay so no
+   * class names change. Hover, deep and the tints keep the old shades'
+   * lightness with the navy hue. */
+  --color-lagoon: #082658;
+  --color-lagoon-hover: #24519b;
+  --color-lagoon-deep: #041b43;
+  --color-lagoon-tint: #dde8fb;
+  --color-lagoon-faint: #eef4fd;
   --color-brass: #b8862b;
   --color-brass-ink: #9a6f1e;
   --color-brass-surface: #f3e7ce;
@@ -56,12 +60,12 @@
   --color-inverse-on-surface: #eaf2f5;
   --color-outline: #71787a;
   --color-outline-variant: #c0c8ca;
-  --color-surface-tint: #3c646d;
-  --color-primary: #00252b;
+  --color-surface-tint: #315083;
+  --color-primary: #00123a;
   --color-on-primary: #ffffff;
-  --color-primary-container: #0e3b43;
-  --color-on-primary-container: #7ca5ae;
-  --color-inverse-primary: #a4cdd7;
+  --color-primary-container: #082658;
+  --color-on-primary-container: #7f9ed0;
+  --color-inverse-primary: #a7c6fa;
   --color-secondary: #7f5700;
   --color-on-secondary: #ffffff;
   --color-secondary-container: #ffc565;
@@ -74,10 +78,10 @@
   --color-on-error: #ffffff;
   --color-error-container: #ffdad6;
   --color-on-error-container: #93000a;
-  --color-primary-fixed: #c0eaf4;
-  --color-primary-fixed-dim: #a4cdd7;
-  --color-on-primary-fixed: #001f25;
-  --color-on-primary-fixed-variant: #234c55;
+  --color-primary-fixed: #d1e3ff;
+  --color-primary-fixed-dim: #a7c6fa;
+  --color-on-primary-fixed: #000d30;
+  --color-on-primary-fixed-variant: #1a386a;
   --color-secondary-fixed: #ffdead;
   --color-secondary-fixed-dim: #f6bd5d;
   --color-on-secondary-fixed: #281900;
@@ -142,7 +146,7 @@
   --radius-card: 0.75rem;
 
   /* Elevation — floating layers only (menus, dialogs, sheets) */
-  --shadow-overlay: 0 12px 32px rgb(14 59 67 / 0.08), 0 2px 6px rgb(0 0 0 / 0.04);
+  --shadow-overlay: 0 12px 32px rgb(8 38 88 / 0.08), 0 2px 6px rgb(0 0 0 / 0.04);
 }
 
 @layer base {

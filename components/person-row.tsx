@@ -13,7 +13,7 @@ export function PersonRow({ person }: { person: Person }) {
         href={`/people/${person.id}`}
         className="flex min-h-16 items-center gap-4 px-4 py-3 transition-colors hover:bg-lagoon-faint"
       >
-        <Avatar name={name} size={40} />
+        <Avatar name={name} photo={person.photo} size={40} />
         <span className="min-w-0 flex-1">
           <span className="block truncate font-serif text-title-card font-medium text-ink">{name}</span>
           <span className="block truncate text-body-md text-ink-secondary">
@@ -22,10 +22,12 @@ export function PersonRow({ person }: { person: Person }) {
         </span>
         <span className="hidden items-center gap-2 md:flex">
           <span className="chip bg-lagoon-tint text-lagoon">{person.industry}</span>
-          <span className="chip border-line text-ink-secondary">
-            <MapPin aria-hidden="true" className="size-3.5" />
-            {person.location}
-          </span>
+          {person.location && (
+            <span className="chip border-line text-ink-secondary">
+              <MapPin aria-hidden="true" className="size-3.5" />
+              {person.location}
+            </span>
+          )}
         </span>
         <ChevronRight aria-hidden="true" className="size-5 shrink-0 text-ink-muted" />
       </Link>

@@ -10,6 +10,7 @@ import type { Channel } from "@/lib/data";
 export type ConversationSummary = {
   id: string;
   name: string;
+  photo?: string;
   preview: string;
   lastActivity: string;
   unread: number;
@@ -131,7 +132,7 @@ function ConversationRow({
           selected ? "bg-lagoon-tint" : "hover:bg-lagoon-faint"
         }`}
       >
-        <Avatar name={conversation.name} size={48} online={conversation.online} />
+        <Avatar name={conversation.name} photo={conversation.photo} size={48} online={conversation.online} />
         <span className="min-w-0 flex-1">
           <span className="flex items-baseline justify-between gap-2">
             <span className="truncate font-serif text-title-card font-medium text-ink">

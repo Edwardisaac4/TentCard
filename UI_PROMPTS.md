@@ -26,10 +26,10 @@ Prompts for generating every screen of the cohort platform in Google Stitch, wit
 ```
 Design system for "Syndicate", a private networking app for an executive-education cohort at a business school in Lagos, Nigeria. Users are senior professionals aged 35–55: heads of department, directors, business owners. The feel is calm, confident and executive, like a well-run seminar room. Not a social network, not playful.
 
-Visual idea: brass name plates and folded tent cards on a seminar table, and the deep blue-green of the Lagos lagoon.
+Visual idea: brass name plates and folded tent cards on a seminar table, and a deep navy.
 
 Colours:
-- Lagoon (primary, buttons, links, active states): #0E3B43; hover #2A6B73; light tint #DCEBEC; faint tint #EEF5F5; deep sidebar #0A2E34
+- Lagoon (primary, buttons, links, active states): #082658; hover #24519B; light tint #DDE8FB; faint tint #EEF4FD; deep sidebar #041B43
 - Brass (identity accent, used sparingly: avatar rings, a thin rule on top of name cards, badges for the cohort lead): #B8862B; brass text #9A6F1E; brass tint #F3E7CE
 - Text: #1A2224 primary, #5B6669 secondary, #8A9497 placeholder
 - Borders #DDE2E1, app background #F5F7F6, cards and inputs #FFFFFF
@@ -48,7 +48,7 @@ Shape and spacing:
 
 Avoid: gradients, glassmorphism, glowing effects, stock photos, emoji, illustrations of people, arrows in button text, text separated by middle dots, identical cards for every kind of content.
 
-Avatars: when there is no photo, show initials in the serif font on #EEF5F5 with a 2px brass ring.
+Avatars: when there is no photo, show initials in the serif font on #EEF4FD with a 2px brass ring.
 
 All people and companies are fictional. Use these sample people:
 Adaeze Okafor, Head of Treasury, Harbourline Bank, Financial services
@@ -87,7 +87,7 @@ Bottom tab bar, 64px, white with a top border: Home, Directory (active, lagoon i
 
 ### 2.2 Directory — card view and filter sheet
 ```
-Same Directory screen, but in card view. Each person is a "name card": white, radius 12px, 1px border, 20px padding, with a 3px brass line along the top edge of the card. Inside: avatar 56px with brass ring, name in Newsreader 20px, role in 16px primary text, company in 16px secondary text, a thin divider, then two small chips (industry chip with #DCEBEC fill, location chip outlined "Lagos"), then "Can help with: FX risk, treasury operations" in 14px. Bottom row: "Message" secondary button (white, bordered) and "View profile" text button in lagoon. Cards stacked vertically, 12px apart. Show Adaeze Okafor, Tunde Bakare (with a small brass-tinted badge "Cohort lead" under his name), and Halima Yusuf.
+Same Directory screen, but in card view. Each person is a "name card": white, radius 12px, 1px border, 20px padding, with a 3px brass line along the top edge of the card. Inside: avatar 56px with brass ring, name in Newsreader 20px, role in 16px primary text, company in 16px secondary text, a thin divider, then two small chips (industry chip with #DDE8FB fill, location chip outlined "Lagos"), then "Can help with: FX risk, treasury operations" in 14px. Bottom row: "Message" secondary button (white, bordered) and "View profile" text button in lagoon. Cards stacked vertically, 12px apart. Show Adaeze Okafor, Tunde Bakare (with a small brass-tinted badge "Cohort lead" under his name), and Halima Yusuf.
 
 Then a second state: a bottom sheet opened over the screen (dark scrim behind), with a drag handle, title "Filters", sections "Industry" (checkbox list with counts, e.g. "Financial services 19", "Telecommunications 8", "Information technology 10"), "Location", "Joined only" toggle. Sticky footer with "Clear all" text button and "Show 19 classmates" primary button.
 ```
@@ -185,7 +185,7 @@ Header: back arrow, avatar 36px, name "Halima Yusuf", and below it in 13px "Head
 
 A centred day separator "Today" in 13px secondary text.
 
-Message bubbles: other person's on the left, white with a 1px border, radius 12px with the bottom-left corner 4px; own messages on the right in lagoon #0E3B43 with white text, bottom-right corner 4px. Max width 75%. Show a realistic exchange of 6 messages about reviewing a supplier contract, including one message with an attached PDF shown as a file row (PDF icon, "Supplier_terms_v2.pdf", "420 KB").
+Message bubbles: other person's on the left, white with a 1px border, radius 12px with the bottom-left corner 4px; own messages on the right in lagoon #082658 with white text, bottom-right corner 4px. Max width 75%. Show a realistic exchange of 6 messages about reviewing a supplier contract, including one message with an attached PDF shown as a file row (PDF icon, "Supplier_terms_v2.pdf", "420 KB").
 
 Under the last own message: "Read 10:42" in 13px secondary text.
 
@@ -282,7 +282,7 @@ Mobile screen: onboarding complete. Centred finished name card for Adaeze Okafor
 ```
 Desktop web app, 1440px wide: Directory.
 
-Left sidebar 248px wide in deep lagoon #0A2E34: at the top a placeholder for the school logo and "SMP 102" in white Newsreader; navigation items with icons and labels in light text: Home, Directory (active, with a lighter lagoon background and a brass 3px left marker), Messages (badge 3), Board. A divider, then "Cohort desk" (only for the cohort lead). At the bottom: the user's avatar, name "Tunde Bakare" and an overflow icon.
+Left sidebar 248px wide in deep lagoon #041B43: at the top a placeholder for the school logo and "SMP 102" in white Newsreader; navigation items with icons and labels in light text: Home, Directory (active, with a lighter lagoon background and a brass 3px left marker), Messages (badge 3), Board. A divider, then "Cohort desk" (only for the cohort lead). At the bottom: the user's avatar, name "Tunde Bakare" and an overflow icon.
 
 Main area on #F5F7F6 background with 32px padding: page title "Directory" in Newsreader 28px on the left, bell icon and user avatar in the top right. Search field 480px wide, filter chips in a row, result line "81 classmates", sort menu and grid/list toggle on the right.
 
@@ -353,7 +353,7 @@ Below: "Past announcements" list with title, date and read rate "64 of 81 read".
 ```
 Desktop web app: super admin console. This must look clearly different from the member app.
 
-Top bar 48px in brass #B8862B across the full width with dark text #0A2E34: "Super admin" on the left, a red-tinted "Production" badge, and the admin's avatar on the right.
+Top bar 48px in brass #B8862B across the full width with dark text #041B43: "Super admin" on the left, a red-tinted "Production" badge, and the admin's avatar on the right.
 
 Left sidebar white with a right border (not lagoon): Overview (active), Schools and cohorts, Import, People, Reports, Privacy requests, Audit log, Feature flags, System health.
 
@@ -398,7 +398,7 @@ Table: Time (e.g. "12 Oct 2026, 14:03:22 WAT"), Actor (avatar + name), Action (e
 - "Remove any gradient, emoji, illustration of people or decorative icon."
 - "Make all text sentence case. Remove any all-caps labels."
 - "Brass #B8862B should only appear on avatar rings, the top line of name cards, cohort lead badges and announcement borders. Remove it from everywhere else."
-- "Show this screen in dark mode: background #0F1517, cards #172024, text #E8EDEC, secondary text #A3AEB0, borders #2B3A3F, primary #6FB3BA with #0A2E34 text on primary buttons, brass #D2A24A."
+- "Show this screen in dark mode: background #0F1517, cards #172024, text #E8EDEC, secondary text #A3AEB0, borders #2B3A3F, primary #86A9E8 with #041B43 text on primary buttons, brass #D2A24A."
 - "Show the loading state of this screen using grey skeleton blocks that match the layout. No spinners."
 - "Show the empty state: a 32px outline icon, a one-line title, one sentence of guidance and one button."
 - "Make this screen work at 360px wide without any horizontal scrolling."

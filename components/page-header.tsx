@@ -31,7 +31,7 @@ export function PageHeader({
           <Bell aria-hidden="true" className="size-5" />
           <span aria-hidden="true" className="absolute top-2 right-2.5 size-2 rounded-full bg-lagoon" />
         </button>
-        <Avatar name={fullName(me)} size={36} />
+        <Avatar name={fullName(me)} photo={me.photo} size={36} />
       </div>
     </header>
   );
