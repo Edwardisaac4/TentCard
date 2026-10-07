@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MessageSquare } from "lucide-react";
 import { AnnouncementCard } from "@/components/announcement-card";
 import { Avatar } from "@/components/avatar";
+import { EventCard } from "@/components/event-card";
 import { Greeting } from "@/components/greeting";
 import { PageHeader } from "@/components/page-header";
 import {
@@ -11,8 +12,8 @@ import {
   currentUserId,
   fullName,
   getPerson,
-  newThisWeek,
   suggestions,
+  upcomingEvent,
   type BoardPost,
   type Person,
 } from "@/lib/data";
@@ -32,13 +33,9 @@ export default function HomePage() {
         <div className="flex min-w-0 flex-col gap-8">
           {pinned && <AnnouncementCard announcement={pinned} />}
 
-          <section aria-labelledby="new-this-week">
-            <SectionHeader id="new-this-week" title="New this week" link={{ href: "/directory", label: "See all", context: "classmates" }} />
-            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {newThisWeek.map((id) => (
-                <CompactNameCard key={id} person={getPerson(id)!} />
-              ))}
-            </ul>
+          <section aria-labelledby="coming-up">
+            <SectionHeader id="coming-up" title="Coming up" />
+            <EventCard event={upcomingEvent} />
           </section>
 
           <section aria-labelledby="open-asks">
@@ -85,24 +82,6 @@ function SectionHeader({
         </Link>
       )}
     </div>
-  );
-}
-
-function CompactNameCard({ person }: { person: Person }) {
-  const name = fullName(person);
-
-  return (
-    <li>
-      <Link
-        href={`/people/${person.id}`}
-        className="card card-seminar flex h-full flex-col p-5 transition-colors hover:bg-lagoon-faint"
-      >
-        <Avatar name={name} photo={person.photo} size={48} />
-        <span className="mt-4 font-serif text-title-card font-medium text-ink">{name}</span>
-        <span className="mt-1 text-body-md text-ink">{person.role}</span>
-        <span className="text-body-md text-ink-secondary">{person.company}</span>
-      </Link>
-    </li>
   );
 }
 
