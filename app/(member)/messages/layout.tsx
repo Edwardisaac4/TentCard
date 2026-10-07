@@ -14,6 +14,7 @@ function summaries(): ConversationSummary[] {
     return {
       id: person.id,
       name: fullName(person),
+      photo: person.photo,
       preview: last.from === "me" ? `You: ${body}` : body,
       lastActivity: conversation.lastActivity,
       unread: conversation.unread,

@@ -10,6 +10,7 @@ const MAX_LENGTH = 4000;
 type ThreadPerson = {
   firstName: string;
   name: string;
+  photo?: string;
   subtitle: string;
   canHelpWith: string[];
 };
@@ -219,7 +220,7 @@ function FirstMessage({
 
   return (
     <div className="mx-auto flex max-w-md flex-col items-center py-10 text-center">
-      <Avatar name={person.name} size={64} />
+      <Avatar name={person.name} photo={person.photo} size={64} />
       <p className="mt-4 font-serif text-display-sm text-ink">{person.name}</p>
       <p className="text-body-md text-ink-secondary">{person.subtitle}</p>
       <p className="mt-6 text-body-lg text-ink">

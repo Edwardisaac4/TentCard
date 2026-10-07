@@ -1,11 +1,15 @@
-/** Initials avatar: serif initials on faint lagoon with a 2px brass ring. */
+import Image from "next/image";
+
+/** Round avatar with a 2px brass ring: the member's photo, or serif initials on faint lagoon. */
 export function Avatar({
   name,
+  photo,
   size = 40,
   online,
   className = "",
 }: {
   name: string;
+  photo?: string;
   size?: number;
   online?: boolean;
   className?: string;
@@ -23,7 +27,11 @@ export function Avatar({
         className="avatar"
         style={{ width: size, height: size, fontSize: Math.round(size * 0.38) }}
       >
-        {initials}
+        {photo ? (
+          <Image src={photo} alt="" width={size} height={size} className="size-full object-cover" />
+        ) : (
+          initials
+        )}
       </span>
       {online && (
         <span className="absolute right-0 bottom-0 size-3 rounded-full border-2 border-white bg-success">

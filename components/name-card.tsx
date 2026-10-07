@@ -10,7 +10,7 @@ export function NameCard({ person }: { person: Person }) {
   return (
     <article className="card card-seminar flex flex-col p-5">
       <div className="flex gap-4">
-        <Avatar name={name} size={56} />
+        <Avatar name={name} photo={person.photo} size={56} />
         <div className="min-w-0">
           <h2 className="font-serif text-display-sm text-ink">{name}</h2>
           {person.isLead && <span className="chip chip-lead mt-1">Cohort lead</span>}
@@ -23,10 +23,12 @@ export function NameCard({ person }: { person: Person }) {
 
       <div className="flex flex-wrap gap-2">
         <span className="chip bg-lagoon-tint text-lagoon">{person.industry}</span>
-        <span className="chip border-line text-ink-secondary">
-          <MapPin aria-hidden="true" className="size-3.5" />
-          {person.location}
-        </span>
+        {person.location && (
+          <span className="chip border-line text-ink-secondary">
+            <MapPin aria-hidden="true" className="size-3.5" />
+            {person.location}
+          </span>
+        )}
       </div>
 
       {person.canHelpWith.length > 0 && (

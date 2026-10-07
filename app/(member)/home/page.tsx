@@ -97,7 +97,7 @@ function CompactNameCard({ person }: { person: Person }) {
         href={`/people/${person.id}`}
         className="card card-seminar flex h-full flex-col p-5 transition-colors hover:bg-lagoon-faint"
       >
-        <Avatar name={name} size={48} />
+        <Avatar name={name} photo={person.photo} size={48} />
         <span className="mt-4 font-serif text-title-card font-medium text-ink">{name}</span>
         <span className="mt-1 text-body-md text-ink">{person.role}</span>
         <span className="text-body-md text-ink-secondary">{person.company}</span>
@@ -135,7 +135,7 @@ function SuggestionCard({ person, reason }: { person: Person; reason: string }) 
   return (
     <li className="card card-seminar flex flex-col p-5">
       <div className="flex gap-4">
-        <Avatar name={name} size={56} />
+        <Avatar name={name} photo={person.photo} size={56} />
         <div className="min-w-0">
           <p className="font-serif text-display-sm text-ink">{name}</p>
           <p className="mt-1 text-body-md text-ink">{person.role}</p>
