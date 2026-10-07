@@ -1,0 +1,32 @@
+# pnpm settings for this repo (AGENTS.md section 4.1). This is a single
+# package, not a monorepo, so there is no `packages:` list.
+
+# Don't install any version, direct or transitive, published less than
+# 3 days ago. Hijacked releases are usually caught within that window.
+minimumReleaseAge: 4320
+
+# Temporary: Next.js 16.4.0 came out on 6 Oct 2026, the day this project
+# was created on it. Exact versions only, so later upgrades still wait
+# 3 days. Remove this list after 9 Oct 2026 18:35 UTC.
+minimumReleaseAgeExclude:
+  - next@16.4.0
+  - eslint-config-next@16.4.0
+  - '@next/env@16.4.0'
+  - '@next/eslint-plugin-next@16.4.0'
+  - '@next/swc-darwin-arm64@16.4.0'
+  - '@next/swc-darwin-x64@16.4.0'
+  - '@next/swc-linux-arm64-gnu@16.4.0'
+  - '@next/swc-linux-arm64-musl@16.4.0'
+  - '@next/swc-linux-x64-gnu@16.4.0'
+  - '@next/swc-linux-x64-musl@16.4.0'
+  - '@next/swc-win32-arm64-msvc@16.4.0'
+  - '@next/swc-win32-x64-msvc@16.4.0'
+
+# Dependency install scripts are blocked unless allowed here. Install fails
+# on any unreviewed script (strictDepBuilds is on by default), so every
+# package with one must be listed: `true` to run it, `false` to skip it.
+# Give each entry a reason.
+allowBuilds:
+  # Its postinstall only fetches the native binary when the optional
+  # platform package is missing. pnpm installs that package itself.
+  unrs-resolver: false
