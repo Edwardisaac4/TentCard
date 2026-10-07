@@ -29,7 +29,12 @@ export async function signIn(_previous: SignInState, formData: FormData): Promis
   const expectedEmail = process.env.SIGN_IN_EMAIL?.trim().toLowerCase();
   const expectedPassword = process.env.SIGN_IN_PASSWORD;
   if (!expectedEmail || !expectedPassword) {
-    console.error("Sign-in isn't configured: set SIGN_IN_EMAIL and SIGN_IN_PASSWORD in .env.local");
+    const missing = [!expectedEmail && "SIGN_IN_EMAIL", !expectedPassword && "SIGN_IN_PASSWORD"].filter(Boolean);
+    // VERCEL_ENV says which Vercel environment (production, preview) is missing the values.
+    console.error(
+      `Sign-in isn't configured (${process.env.VERCEL_ENV ?? "local"}): ${missing.join(" and ")} not set. ` +
+        "Locally, add them to .env.local; on Vercel, under Settings, Environment Variables, for this environment.",
+    );
     return { error: "Sign-in isn't available right now. Try again later." };
   }
 
